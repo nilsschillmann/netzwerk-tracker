@@ -1,9 +1,14 @@
 FROM python:3.9.9
 
-COPY tracker.py ./
-COPY auswertung.py ./
-COPY requirements.txt ./
+RUN mkdir tracker
+
+COPY tracker.py ./tracker
+COPY requirements.txt ./tracker
+
+WORKDIR /tracker
+
+RUN mkdir log
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD [ "python", "./tracker.py" ]
+CMD [ "python", "tracker.py" ]
