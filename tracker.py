@@ -39,7 +39,7 @@ url_size = 4
 timeout = 5
 sleeptime = 10
 file_path = os.path.expanduser(".")
-filename = "/".join([file_path, "track.txt"])
+filename = "/log/".join([file_path, "track.txt"])
 #%%
 
 def check_connection(url):
